@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Figtree-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Figtree-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Figtree-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Figtree-Bold.ttf") format("truetype");
+}
+
+/* @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+} */
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --primary-color: #09090B;
+}
+
+body {
+    font-family: Figtree;
+    background-color: #eee;
+    -webkit-font-smoothing: antialiased;
+}
+
+table.caption-bottom {
+    th,
+    td {
+        &:last-child {
+            width: 0;
+        }
+    }
+}
+
+.font-secondary {
+    font-family: Montserrat;
+}
+
+.rbc-calendar {
+    flex: 1;
+    overflow: hidden;
+}
+
+.rbc-calendar .rbc-today {
+    background-color: #fef9c3 !important;
+}
+
+.rbc-calendar .rbc-off-range-bg {
+    background-color: #f0f0f0;
+}
+
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+    width: calc(100% - 8px) !important;
+    font-size: 14px;
+    font-weight: 500;
+    /* background-color: #ffedd5 !important;
+    color: #c2410b !important; */
+    margin: 1px 4px !important;
+    border: none !important;
+    cursor: grab !important;
+    outline: none !important;
+}
+
+.rbc-day-slot .rbc-event {
+    padding: 2px 12px;
+    border-bottom: 1px solid #fff !important;
+}
+
+.calendar-instance-items {
+    display: flex;
+    flex: 0 0 auto;
+    overflow: auto;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &>* {
+        cursor: grab;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        gap: 5px;
+        border-radius: 5px;
+
+        small {
+            font-size: 85%;
+            font-weight: 500;
+        }
+    }
+}
+
+.rbc-event.molding,
+.rbc-day-slot .rbc-background-event.molding,
+.calendar-instance-items>div.molding,
+.rbc-event.absent,
+.rbc-day-slot .rbc-background-event.absent,
+.calendar-instance-items>div.absent,
+.appointment-status-badge.molding,
+.appointment-status-badge.absent {
+    position: relative;
+    padding-left: 30px;
+    overflow: hidden;
+
+    &::before {
+        content: "MP";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0 4px;
+        color: #fff;
+        font-size: 12px;
+        background-color: #c2183a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.done {
+        &::before {
+            color: inherit;
+            font-weight: bold;
+            background-color: inherit;
+            mix-blend-mode: multiply;
+        }
+    }
+}
+
+.rbc-event.absent,
+.rbc-day-slot .rbc-background-event.absent,
+.calendar-instance-items>div.absent,
+.appointment-status-badge.absent {
+    &::before {
+        content: "AB";
+        background-color: var(--primary-color);
+    }
+}
+
+.rbc-month-header .rbc-header {
+    border-left: none !important;
+    text-transform: uppercase;
+    padding: 6px;
+    font-size: 13px;
+}
+
+.rbc-month-view {
+    border: none !important;
+}
+
+.rbc-toolbar {
+    justify-content: space-between !important;
+    flex-direction: row-reverse;
+    margin-bottom: 20px !important;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+    text-transform: capitalize;
+    padding: 0 !important;
+    font-weight: bold;
+    font-size: 18px;
+    flex: 0 0 auto !important;
+    margin-right: 30px;
+}
+
+.rbc-toolbar button {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    background-color: transparent !important;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #eee !important;
+    }
+
+    &.rbc-active {
+        background-color: var(--primary-color) !important;
+        color: #fff !important;
+    }
+
+    &:first-child {
+        border-top-left-radius: 30px !important;
+        border-bottom-left-radius: 30px !important;
+    }
+
+    &:last-child {
+        border-top-right-radius: 30px !important;
+        border-bottom-right-radius: 30px !important;
+    }
+}
+
+.rbc-btn-group:first-child {
+    button {
+        &:first-child {
+            margin-right: 10px;
+            background-color: var(--primary-color) !important;
+            color: #fff !important;
+            border: none !important;
+            border-radius: 30px !important;
+        }
+
+        &:nth-child(2) {
+            border-top-left-radius: 30px !important;
+            border-bottom-left-radius: 30px !important;
+        }
+    }
+}
+
+.rbc-day-slot .rbc-event-content {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.login-logo {
+    filter: brightness(0);
+    width: 280px;
+}
+
+.rbc-show-more {
+    color: var(--primary-color) !important;
+}
+
+.settings-sidebar .data-\[state\=active\]\:bg-background[data-state="active"] {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    height: 45px;
+}
+
+#appointment-modal {
+    >button {
+        display: none;
+    }
+}
+
+.disabled\:opacity-50:disabled {
+    opacity: 1;
+    background-color: #f3f4f6;
+    color: #666;
+}
+
+.rbc-current {
+    .rbc-button-link {
+        background-color: #fde047 !important;
+        color: #000 !important;
+        font-weight: normal !important;
+        padding: 4px 6px;
+        margin-right: -5px;
+        border-radius: 0 0 0 8px;
+    }
+}
+
+.navbar {
+    a {
+        font-weight: 500;
+        opacity: .75;
+
+        &.active {
+            opacity: 1;
+            font-weight: bold;
+            transform: scale(1.1);
+
+            svg {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

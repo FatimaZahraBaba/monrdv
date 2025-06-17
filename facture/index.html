@@ -1,0 +1,175 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 25mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20pt;
+        }
+
+        header h1 {
+            margin-bottom: 5pt;
+            font-size: 20pt;
+        }
+
+        header img {
+            width: 250pt;
+            margin-bottom: 15pt;
+        }
+
+        .header .date {
+            text-transform: capitalize;
+        }
+
+        .client {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60pt;
+            padding: 15pt;
+            border: 3pt solid #000;
+            font-size: 11pt;
+        }
+
+        h2 {
+            margin-bottom: 15pt;
+            font-size: 20pt;
+        }
+
+        .data {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20pt;
+        }
+
+        .data .number {
+            display: block;
+            font-size: 13pt;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border-bottom: 1pt solid #ddd;
+            padding: 15pt;
+            text-align: left;
+        }
+
+        th {
+            font-weight: bold;
+            border-bottom-width: 2pt;
+        }
+
+        tbody td {
+            padding-bottom: 50pt;
+        }
+
+        tfoot td {
+            font-weight: bold;
+            border-bottom-width: 2pt;
+        }
+
+        .price-letter {
+            margin-top: 30pt;
+        }
+
+        .price-letter b {
+            text-transform: capitalize;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-top: 10mm;
+            border-top: 1pt solid #000;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 2pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./logo.jpg" alt="logo">
+            <p>Avenue Abou Jihad, N° 12 cité El Massira<br>80000 Agadir</p>
+        </div>
+        <span class="date"><small>Fait le : </small><br>12 février 2025</span>
+    </header>
+
+    <div class="client">
+        <span>Client : <b>Jean Dupont</b></span>
+        <span>|</span>
+        <span>Préscripteur : <b>DR. Martin Durand</b></span>
+    </div>
+
+    <h2>Facture</h2>
+    <div class="data">
+        <div>
+            <span>Facture N°</span>
+            <span class="number">F2025-001</span>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Qte</th>
+                        <th>Désignation</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Semelles Orthopédiques</td>
+                        <td>350 DH</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td>350 DH</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="price-letter">
+                <span>Arrêtée la présente facture à la somme de :<br><b>Trois cent cinquante Dirhams</b></span>
+            <div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pharmacie ERRAJI - Avenue Abou Jihad, N° 12 cité El Massira, 80000 Agadir</p>
+        <p><b>Patente</b> : 48136207 - <b>RC</b> : 33038 - <b>CNSS</b> : 6023303 - <b>ICE</b> : 001175900000061 - <b>IF</b> : 75758990</p>
+        <p><b>Tél/Fax</b> : 0528 23 62 73 - <b>Email</b> : orthopedeagadir@gmail.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 80px;
+
+        }
+
+        .logo {
+            position: absolute;
+            width: 30%;
+            height: 100px;
+            top: 10px;
+            left: 50px;
+            object-fit: contain;
+        }
+
+        pre {
+            /* font-size: 20px; */
+            font-weight: bold;
+            margin-top: -10px;
+        }
+
+        .info-client {
+            border: 2px solid black;
+            padding: 2px;
+            width: 80%;
+            float: right;
+
+        }
+
+        .info-client table {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        td.titre {
+            font-size: 14px;
+        }
+
+        td:not(.titre) {
+            text-align: center;
+        }
+
+        .num-facture {
+            border: 2px solid black;
+            margin: 130px auto;
+            width: 60%;
+
+        }
+
+        .num-facture table {
+            width: 100%;
+            font-weight: bold;
+            padding: 1px 10px;
+        }
+
+        .num-facture td.num-fac {
+            text-align: right;
+        }
+
+        .num-facture td.titre-fac {
+            text-align: left;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: -100px;
+        }
+
+        .table th {
+            padding: 0 20px;
+            border: 2px solid black;
+        }
+
+        .table td {
+            padding: 10px;
+            font-size: 14px;
+            border: 2px solid black;
+        }
+
+        tr.detail-commande {
+            height: 30vh;
+            vertical-align: top;
+        }
+
+        tr.total {
+            font-weight: bold;
+        }
+
+        td.td-vide {
+            border: none;
+        }
+
+        .somme-facture {
+            margin-top: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            line-height: 0.5;
+            font-weight: bold;
+        }
+
+        .footer-adresse {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="logo" src="./logo.jpg" alt="">
+    <pre>Avenue Abou Jihad, N° 12 cité El Massira
+80000 AGADIR
+    </pre>
+    </div>
+    <div class="info-client">
+        <table>
+            <tr>
+                <td class="titre">Client</td>
+                <td>BOUDIL MERYEM</td>
+            </tr>
+            <tr>
+                <td class="titre">ville</td>
+                <td>AGADIR</td>
+            </tr>
+            <tr>
+                <td class="titre">Prescripteur</td>
+                <td>DR. IMAD GHOUZLANI </td>
+            </tr>
+            <tr>
+                <td class="titre">Date de facturation</td>
+                <td>16/01/2025</td>
+            </tr>
+        </table>
+    </div>
+    <div class="num-facture">
+        <table>
+            <tr>
+                <td class="titre-fac">FACTURE N°</td>
+                <td class="num-fac">14012025</td>
+            </tr>
+        </table>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Quantité</th>
+            <th>Désignation</th>
+            <th>Prix</th>
+            <th>Total</th>
+        </tr>
+        <tr class="detail-commande">
+            <td>1</td>
+            <td>SEMELLES ORTHOPEDIQUES</td>
+            <td>800,00</td>
+            <td>800,00</td>
+        </tr>
+        <tr class="total">
+            <td colspan="2" class="td-vide"></td>
+            <td>Total</td>
+            <td>800,00</td>
+        </tr>
+    </table>
+    <div class="somme-facture">
+        <pre>Arrêtée la présente facture à la somme de :
+Huit cents Dirhams</p>
+    </div>
+    <div class="footer">
+        <p class="footer-adresse">Pharmacie Erraji : Av. Abou Jihad, cité Al Massira - AGADIR -</p>
+        <p>Patente : 48136207 - RC : 33038 - CNSS : 6023303 ICE : 00117590000061</p>
+        <p>Tél/Fax : 05 28 23 62 73 - E-mail : orthopedeagadir@gmail.com</p>
+    </div>
+</body>
+
+</html>

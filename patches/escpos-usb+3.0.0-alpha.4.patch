@@ -1,0 +1,25 @@
+diff --git a/node_modules/escpos-usb/index.js b/node_modules/escpos-usb/index.js
+index 8c21546..98fdc3c 100644
+--- a/node_modules/escpos-usb/index.js
++++ b/node_modules/escpos-usb/index.js
+@@ -49,13 +49,13 @@ function USB(vid, pid){
+   if (!this.device)
+     throw new Error('Can not find printer');
+ 
+-  usb.on('detach', function(device){
+-    if(device == self.device) {
+-      self.emit('detach'    , device);
+-      self.emit('disconnect', device);
+-      self.device = null;
+-    }
+-  });
++  // usb.on('detach', function(device){
++  //   if(device == self.device) {
++  //     self.emit('detach'    , device);
++  //     self.emit('disconnect', device);
++  //     self.device = null;
++  //   }
++  // });
+ 
+   return this;
+ 
